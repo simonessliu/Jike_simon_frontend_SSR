@@ -42,6 +42,7 @@ jobs:
 
       - run:
           name: Deploy develop env to Now.sh
+          # server side rendering 是把json 文件复制到 root 文件夹下并重命名为now.json
           command: |
             sudo cp .now/develop.json now.json && now --public --token=$NOW_TOKEN && now --token=$NOW_TOKEN alias
 
